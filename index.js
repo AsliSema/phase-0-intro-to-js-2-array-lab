@@ -1,43 +1,33 @@
 // Write your solution here!
 let cats = ["Milo", "Otis", "Garfield"];
 
-function destructivelyAppendCat(animals) {
-    cats.splice(3, 0, "Ralph")
-    return animals
+function destructivelyAppendCat(name) {
+    cats.splice(3, 0, name)
 }
-function destructivelyPrependCat(animals){
-    cats.splice(0, 0, "Bob")
-    return animals
+function destructivelyPrependCat(name){
+    cats.splice(0, 0, name)
 }
-function destructivelyRemoveLastCat(animals){
+function destructivelyRemoveLastCat(){
     cats.pop()
-    return animals
 }
-function destructivelyRemoveFirstCat(animals){
+function destructivelyRemoveFirstCat(){
     cats.shift()
-    return animals
 }
-function appendCat(animals){
-    return [...cats, "Broom"]
+function appendCat(name){
+    return [...cats, name]
 }
-function prependCat(animals){
-    return ["Arnold", ...cats]
+function prependCat(name){
+    return [name, ...cats]
 }
-function removeLastCat(animals){
+function removeLastCat(){
     const copyCats = [...cats]
     copyCats.pop()
     return copyCats
 }
-function removeFirstCat(animals){
+function removeFirstCat(){
     const copyCats = [...cats]
     copyCats.shift()
     return copyCats
 }
 
-destructivelyUpdateObject(cats)
-destructivelyPrependCat(cats)
-destructivelyRemoveLastCat(cats)
-destructivelyRemoveFirstCat(cats)
-appendCat(cats)
-prependCat(cats)
-removeLastCat(cats)
+
